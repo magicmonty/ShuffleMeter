@@ -45,6 +45,7 @@
     <Compile Include="Cards\Suit.cs" />
     <Compile Include="ShuffleStrategy\AbstractShuffleStrategy.cs" />
     <Compile Include="ShuffleStrategy\RegularShuffleStrategy.cs" />
+    <Compile Include="ShuffleStrategy\FaroShuffleStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

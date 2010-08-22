@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using CardLib;
 using CardLib.Cards;
 
@@ -9,14 +10,17 @@ namespace ShuffleMeterTest
 		public static void Main (string[] args)
 		{
 			CardDeck deck = new CardDeck ();
+			Color back = Color.Blue;
 			
 			for (Suit s = Suit.Clubs; s <= Suit.Diamonds; s++) {
 				for (CardValue v = CardValue.Ace; v <= CardValue.King; v++) {
-					NormalCard card = new NormalCard (v, s, AbstractCard.DEFAULT_BACK_COLOR);
+					back = back == Color.Blue ? Color.Red : Color.Blue;
+					NormalCard card = new NormalCard (v, s, back);
 					deck.addCard (card);
 				}
 			}
 			
+			deck.shuffleStrategy = new FaroShuffleStrategy (true, false);
 			deck.shuffle ();
 			Console.WriteLine (deck.ToString ());
 		}

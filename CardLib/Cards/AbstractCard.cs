@@ -34,6 +34,24 @@ namespace CardLib.Cards
 			}
 		}
 		
+		public void Assign (AbstractCard card)
+		{
+			if ((this.faceSide == null) || (!(this.faceSide.GetType ().Equals (card.faceSide.GetType ()))))
+			{
+				this.faceSide = card.faceSide;
+			}
+			else 
+			{
+				this.faceSide.Assign (card.faceSide);
+
+			}
+			if ((this.backSide == null) || (!(this.backSide.GetType ().Equals (card.backSide.GetType ())))) {
+				this.backSide = card.backSide;
+			} else {
+				this.backSide.Assign (card.backSide);
+			}
+		}
+		
 	}
 	
 }

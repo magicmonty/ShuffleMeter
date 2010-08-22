@@ -66,6 +66,16 @@ namespace CardLib
 			return tmp.Equals("") ? "Empty deck" : tmp;
 		}
 
-		
+		public void initEmptyDeck (int count)
+		{
+			this.clear();
+			if (count > 0)
+			{
+				for (int i = 0; i < count; i++)
+				{
+					this.addCard (new NormalCard ());
+				}
+			}
+		}
 	}
 }
