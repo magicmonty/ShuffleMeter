@@ -42,6 +42,9 @@
     <Compile Include="NormalCard.cs" />
     <Compile Include="DoubleBackedCard.cs" />
     <Compile Include="DoubleFacedCard.cs" />
+    <Compile Include="CardDeck.cs" />
+    <Compile Include="AbstractShuffleStrategy.cs" />
+    <Compile Include="RegularShuffleStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

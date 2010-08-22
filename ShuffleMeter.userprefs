@@ -1,14 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CardLib/Card.cs" ctype="Workbench">
-    <Files>
-      <File FileName="CardLib/Card.cs" Line="52" Column="3" />
-    </Files>
+  <MonoDevelop.Ide.Workbench ctype="Workbench">
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="CardLib" expanded="True">
-            <Node name="References" expanded="True" selected="True" />
+          <Node name="CardLibTest" expanded="True">
+            <Node name="References" expanded="True" selected="True">
+              <Node name="nunit.core, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
