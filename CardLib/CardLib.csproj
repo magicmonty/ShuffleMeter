@@ -35,16 +35,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Suit.cs" />
-    <Compile Include="CardValue.cs" />
-    <Compile Include="CardSide.cs" />
-    <Compile Include="AbstractCard.cs" />
-    <Compile Include="NormalCard.cs" />
-    <Compile Include="DoubleBackedCard.cs" />
-    <Compile Include="DoubleFacedCard.cs" />
     <Compile Include="CardDeck.cs" />
     <Compile Include="AbstractShuffleStrategy.cs" />
     <Compile Include="RegularShuffleStrategy.cs" />
+    <Compile Include="Cards\AbstractCard.cs" />
+    <Compile Include="Cards\CardSide.cs" />
+    <Compile Include="Cards\CardValue.cs" />
+    <Compile Include="Cards\DoubleBackedCard.cs" />
+    <Compile Include="Cards\DoubleFacedCard.cs" />
+    <Compile Include="Cards\NormalCard.cs" />
+    <Compile Include="Cards\Suit.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Cards\" />
+  </ItemGroup>
 </Project>
