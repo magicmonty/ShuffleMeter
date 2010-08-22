@@ -4,11 +4,8 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="CardLibTest" expanded="True">
-            <Node name="References" expanded="True" selected="True">
-              <Node name="nunit.core, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="CardLib" expanded="True" />
+          <Node name="ShuffleMeterTest" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
