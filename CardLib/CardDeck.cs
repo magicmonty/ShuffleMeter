@@ -53,5 +53,18 @@ namespace CardLib
 			this.cardStack.RemoveAt (index);
 		}
 		
+		public override string ToString ()
+		{
+			String tmp = "";
+			foreach (AbstractCard card in cardStack)
+			{
+				tmp = tmp + card.ToString() + "\n";
+			}
+
+			tmp = tmp.Trim ();
+			return tmp.Equals("") ? "Empty deck" : tmp;
+		}
+
+		
 	}
 }

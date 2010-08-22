@@ -56,5 +56,11 @@ namespace CardLib
 		public DoubleFacedCard () : this(DEFAULT_CARD_VALUE, DEFAULT_SUIT, DEFAULT_CARD_VALUE, DEFAULT_SUIT)
 		{
 		}
+		
+		public override string ToString ()
+		{
+			return string.Format ("DoubleFace: {0} / {1}", this.faceSide.ToString(), this.backSide.ToString ());
+		}
+
 	}
 }

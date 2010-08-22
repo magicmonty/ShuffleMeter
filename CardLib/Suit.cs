@@ -8,6 +8,6 @@ namespace CardLib
 		Clubs,
 		Hearts,
 		Spades,
-		Diamonds
+		Diamonds		
 	}
 }

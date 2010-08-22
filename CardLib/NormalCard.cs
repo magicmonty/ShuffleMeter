@@ -45,5 +45,11 @@ namespace CardLib
 		public NormalCard () : this(DEFAULT_CARD_VALUE, DEFAULT_SUIT, DEFAULT_BACK_COLOR)
 		{
 		}
+		
+		public override string ToString ()
+		{
+			return string.Format("{0} ({1})", faceSide.ToString(), backSide.ToString());
+		}
+
 	}
 }

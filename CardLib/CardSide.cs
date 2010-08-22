@@ -26,7 +26,12 @@ namespace CardLib
 
 		public override void Draw (Graphics context, int x, int y, double scale)
 		{
-			
+		
+		}
+		
+		public override string ToString ()
+		{
+			return string.Format ("{0} of {1}", cardValue.ToString(), suit.ToString());
 		}
 	}
 
@@ -46,8 +51,15 @@ namespace CardLib
 
 		public override void Draw (Graphics context, int x, int y, double scale)
 		{
-			
+		
 		}
+		
+		public override string ToString ()
+		{
+			
+			return string.Format ("{0} back", backColor.Name);
+		}
+
 	}
 	
 	

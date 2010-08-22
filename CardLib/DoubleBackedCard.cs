@@ -31,8 +31,14 @@ namespace CardLib
 			this.backSide = new BackSide (backColor2);
 		}
 		
-		public DoubleBackedCard(): this(DEFAULT_BACK_COLOR, DEFAULT_BACK_COLOR)
+		public DoubleBackedCard () : this(DEFAULT_BACK_COLOR, DEFAULT_BACK_COLOR)
 		{
 		}
+		
+		public override string ToString ()
+		{
+			return string.Format ("DoubleBack: {0} / {1}", this.faceSide.ToString (), this.backSide.ToString ());
+		}
+
 	}
 }
