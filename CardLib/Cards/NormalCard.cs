@@ -1,7 +1,7 @@
 using System;
 using System.Drawing;
 
-namespace CardLib
+namespace CardLib.Cards
 {
 	public class NormalCard : AbstractCard
 	{

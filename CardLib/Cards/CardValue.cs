@@ -1,7 +1,7 @@
 
 using System;
 
-namespace CardLib
+namespace CardLib.Cards
 {
 	public enum CardValue
 	{

@@ -1,11 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CardLib/Cards/Suit.cs" ctype="Workbench">
+    <Files>
+      <File FileName="ShuffleMeterTest/Main.cs" Line="1" Column="1" />
+      <File FileName="CardLib/Cards/AbstractCard.cs" Line="4" Column="18" />
+      <File FileName="CardLib/Cards/CardSide.cs" Line="4" Column="24" />
+      <File FileName="CardLib/Cards/CardValue.cs" Line="4" Column="24" />
+      <File FileName="CardLib/Cards/DoubleBackedCard.cs" Line="4" Column="24" />
+      <File FileName="CardLib/Cards/DoubleFacedCard.cs" Line="4" Column="24" />
+      <File FileName="CardLib/Cards/NormalCard.cs" Line="4" Column="24" />
+      <File FileName="CardLib/Cards/Suit.cs" Line="13" Column="2" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="CardLib" expanded="True" />
-          <Node name="ShuffleMeterTest" expanded="True" selected="True" />
+          <Node name="CardLib" expanded="True">
+            <Node name="Cards" expanded="True" />
+          </Node>
+          <Node name="ShuffleMeterTest" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

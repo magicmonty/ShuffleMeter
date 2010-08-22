@@ -1,5 +1,6 @@
 using System;
 using CardLib;
+using CardLib.Cards;
 
 namespace ShuffleMeterTest
 {
