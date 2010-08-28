@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardLib", "CardLib\CardLib.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuffleMeterTest", "ShuffleMeterTest\ShuffleMeterTest.csproj", "{EACADEEC-D150-4DCB-A01C-853D41661E18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuffleMeter", "ShuffleMeter\ShuffleMeter.csproj", "{63110D45-EF0E-4EB0-BC80-E6E29487B09A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +18,12 @@ Global
 		{5D5AD4AB-166E-4757-B31F-C554CE7A325A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D5AD4AB-166E-4757-B31F-C554CE7A325A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D5AD4AB-166E-4757-B31F-C554CE7A325A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EACADEEC-D150-4DCB-A01C-853D41661E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EACADEEC-D150-4DCB-A01C-853D41661E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EACADEEC-D150-4DCB-A01C-853D41661E18}.Default|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,6 +32,6 @@ Global
 		{EACADEEC-D150-4DCB-A01C-853D41661E18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = ShuffleMeterTest\ShuffleMeterTest.csproj
+		StartupItem = ShuffleMeter\ShuffleMeter.csproj
 	EndGlobalSection
 EndGlobal

@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
+    <Reference Include="gtk-sharp, Version=2.10.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
@@ -51,5 +52,64 @@
   <ItemGroup>
     <Folder Include="Cards\" />
     <Folder Include="ShuffleStrategy\" />
+    <Folder Include="CardImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CardImages\AceClubs.png" />
+    <EmbeddedResource Include="CardImages\AceSpades.png" />
+    <EmbeddedResource Include="CardImages\AceHearts.png" />
+    <EmbeddedResource Include="CardImages\AceDiamonds.png" />
+    <EmbeddedResource Include="CardImages\KingClubs.png" />
+    <EmbeddedResource Include="CardImages\KingSpades.png" />
+    <EmbeddedResource Include="CardImages\KingHearts.png" />
+    <EmbeddedResource Include="CardImages\KingDiamonds.png" />
+    <EmbeddedResource Include="CardImages\QueenClubs.png" />
+    <EmbeddedResource Include="CardImages\QueenSpades.png" />
+    <EmbeddedResource Include="CardImages\QueenHearts.png" />
+    <EmbeddedResource Include="CardImages\QueenDiamonds.png" />
+    <EmbeddedResource Include="CardImages\JackClubs.png" />
+    <EmbeddedResource Include="CardImages\JackSpades.png" />
+    <EmbeddedResource Include="CardImages\JackHearts.png" />
+    <EmbeddedResource Include="CardImages\JackDiamonds.png" />
+    <EmbeddedResource Include="CardImages\TenClubs.png" />
+    <EmbeddedResource Include="CardImages\TenSpades.png" />
+    <EmbeddedResource Include="CardImages\TenHearts.png" />
+    <EmbeddedResource Include="CardImages\TenDiamonds.png" />
+    <EmbeddedResource Include="CardImages\NineClubs.png" />
+    <EmbeddedResource Include="CardImages\NineSpades.png" />
+    <EmbeddedResource Include="CardImages\NineHearts.png" />
+    <EmbeddedResource Include="CardImages\NineDiamonds.png" />
+    <EmbeddedResource Include="CardImages\EightClubs.png" />
+    <EmbeddedResource Include="CardImages\EightSpades.png" />
+    <EmbeddedResource Include="CardImages\EightHearts.png" />
+    <EmbeddedResource Include="CardImages\EightDiamonds.png" />
+    <EmbeddedResource Include="CardImages\SevenClubs.png" />
+    <EmbeddedResource Include="CardImages\SevenSpades.png" />
+    <EmbeddedResource Include="CardImages\SevenHearts.png" />
+    <EmbeddedResource Include="CardImages\SevenDiamonds.png" />
+    <EmbeddedResource Include="CardImages\SixClubs.png" />
+    <EmbeddedResource Include="CardImages\SixSpades.png" />
+    <EmbeddedResource Include="CardImages\SixHearts.png" />
+    <EmbeddedResource Include="CardImages\SixDiamonds.png" />
+    <EmbeddedResource Include="CardImages\FiveClubs.png" />
+    <EmbeddedResource Include="CardImages\FiveSpades.png" />
+    <EmbeddedResource Include="CardImages\FiveHearts.png" />
+    <EmbeddedResource Include="CardImages\FiveDiamonds.png" />
+    <EmbeddedResource Include="CardImages\FourClubs.png" />
+    <EmbeddedResource Include="CardImages\FourSpades.png" />
+    <EmbeddedResource Include="CardImages\FourHearts.png" />
+    <EmbeddedResource Include="CardImages\FourDiamonds.png" />
+    <EmbeddedResource Include="CardImages\ThreeClubs.png" />
+    <EmbeddedResource Include="CardImages\ThreeSpades.png" />
+    <EmbeddedResource Include="CardImages\ThreeHearts.png" />
+    <EmbeddedResource Include="CardImages\ThreeDiamonds.png" />
+    <EmbeddedResource Include="CardImages\TwoClubs.png" />
+    <EmbeddedResource Include="CardImages\TwoSpades.png" />
+    <EmbeddedResource Include="CardImages\TwoHearts.png" />
+    <EmbeddedResource Include="CardImages\TwoDiamonds.png" />
+    <EmbeddedResource Include="CardImages\Joker1.png" />
+    <EmbeddedResource Include="CardImages\Joker2.png" />
+    <EmbeddedResource Include="CardImages\BackBlue.png" />
+    <EmbeddedResource Include="CardImages\BackRed.png" />
   </ItemGroup>
 </Project>

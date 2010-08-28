@@ -33,6 +33,17 @@ namespace CardLib.Cards
 				this.backSide.Draw (context, x, y, scale);
 			}
 		}
+
+		public Gtk.Image GetImage ()
+		{
+			if ((this.faceSide != null) && (this.faceUp)) {
+				return this.faceSide.GetImage ();
+			} else if ((this.backSide != null) && (!this.faceUp)) {
+				return this.backSide.GetImage ();
+			}
+			
+			return null;
+		}
 		
 		public void Assign (AbstractCard card)
 		{

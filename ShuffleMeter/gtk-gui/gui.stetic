@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.10</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="../../CardLib/bin/Debug/CardLib.dll" />
+    <widget-library name="../bin/Debug/ShuffleMeter.exe" internal="true" />
+  </import>
+  <widget class="Gtk.Window" id="MainWindow" design-size="559 354">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">MainWindow</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <signal name="DeleteEvent" handler="OnDeleteEvent" />
+    <child>
+      <widget class="Gtk.Fixed" id="fixed1">
+        <property name="MemberName" />
+        <property name="WidthRequest">71</property>
+        <property name="HeightRequest">96</property>
+        <property name="Events">ButtonPressMask</property>
+        <property name="HasWindow">False</property>
+        <child>
+          <widget class="Gtk.EventBox" id="eventbox1">
+            <property name="MemberName" />
+            <property name="WidthRequest">71</property>
+            <property name="HeightRequest">96</property>
+            <property name="Events">ButtonPressMask</property>
+            <property name="AboveChild">True</property>
+            <signal name="ButtonReleaseEvent" handler="OnEventbox1ButtonReleaseEvent" />
+            <child>
+              <widget class="Gtk.Image" id="image2">
+                <property name="MemberName" />
+                <property name="WidthRequest">71</property>
+                <property name="HeightRequest">96</property>
+                <property name="Events">ButtonPressMask, ButtonReleaseMask</property>
+                <property name="ExtensionEvents">All</property>
+                <property name="Xalign">1</property>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="X">9</property>
+            <property name="Y">14</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>

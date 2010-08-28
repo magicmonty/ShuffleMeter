@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using Gtk;
 
 namespace CardLib.Cards
 {
@@ -8,6 +9,7 @@ namespace CardLib.Cards
 	{
 		public abstract void Draw (Graphics context, int x, int y, double scale);
 		public abstract void Assign(AbstractSide source);
+		public abstract Gtk.Image GetImage();
 	}
 
 	class CardSide : AbstractSide
@@ -42,6 +44,11 @@ namespace CardLib.Cards
 				this.suit = ((CardSide)source).suit;
 			}
 		}
+		
+		public override Gtk.Image GetImage ()
+		{
+			return Gtk.Image.LoadFromResource (string.Format ("CardLib.CardImages.{0}{1}.png", cardValue.ToString (), suit.ToString ()));
+		}
 	}
 
 	class BackSide : AbstractSide
@@ -74,6 +81,11 @@ namespace CardLib.Cards
 			if (source is BackSide) {
 				this.backColor = ((BackSide)source).backColor;
 			}
+		}
+
+		public override Gtk.Image GetImage ()
+		{
+			return Gtk.Image.LoadFromResource (string.Format ("CardLib.CardImages.Back{0}.png", backColor.Name));
 		}
 	}
 	

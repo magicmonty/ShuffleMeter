@@ -21,6 +21,7 @@ namespace ShuffleMeterTest
 			}
 			
 			deck.shuffleStrategy = new FaroShuffleStrategy (true, false);
+			Console.WriteLine (deck.ToString ());
 			deck.shuffle ();
 			Console.WriteLine (deck.ToString ());
 		}
