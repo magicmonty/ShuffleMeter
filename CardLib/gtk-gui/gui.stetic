@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stetic-interface>
+  <configuration>
+    <images-root-path>..</images-root-path>
+    <target-gtk-version>2.12</target-gtk-version>
+  </configuration>
+  <import>
+    <widget-library name="../bin/Debug/CardLib.dll" internal="true" />
+  </import>
+  <widget class="Gtk.Bin" id="CardLib.CardRow" design-size="491 300">
+    <property name="MemberName" />
+    <property name="WidthRequest">491</property>
+    <property name="HeightRequest">98</property>
+    <property name="Visible">False</property>
+    <child>
+      <widget class="Gtk.DrawingArea" id="drawingarea1">
+        <property name="MemberName" />
+        <signal name="ExposeEvent" handler="OnDrawingarea1ExposeEvent" />
+      </widget>
+    </child>
+  </widget>
+</stetic-interface>

@@ -46,7 +46,11 @@ namespace CardLib
 		}
 		
 		public AbstractCard getCardAt(int index) {
-			return this.cardStack[index];
+			if ((index >= 0) && (index < this.Count)) {
+				return this.cardStack[index];
+			} else {
+				return null;
+			}
 		}
 		
 		public void removeCardAt (int index)

@@ -3,6 +3,7 @@ using Gtk;
 using CardLib;
 using CardLib.Cards;
 using System.Drawing;
+using Gdk;
 
 public partial class MainWindow : Gtk.Window
 {	
@@ -20,10 +21,21 @@ public partial class MainWindow : Gtk.Window
 			}
 		}
 		
-		deck.shuffleStrategy = new FaroShuffleStrategy (true, false);
+		// deck.shuffleStrategy = new FaroShuffleStrategy (true, false);
 		
 		Build ();
-		image2.Pixbuf = deck.getCardAt (0).GetImage ().Pixbuf;
+		
+		cardrow1.SetQuarter(0);
+		cardrow1.SetDeck(deck);
+		
+		cardrow2.SetQuarter(1);
+		cardrow2.SetDeck(deck);
+		
+		cardrow3.SetQuarter(2);
+		cardrow3.SetDeck(deck);
+		
+		cardrow4.SetQuarter(3);
+		cardrow4.SetDeck(deck);
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -31,14 +43,4 @@ public partial class MainWindow : Gtk.Window
 		Application.Quit ();
 		a.RetVal = true;
 	}
-	
-	protected virtual void OnEventbox1ButtonReleaseEvent (object o, Gtk.ButtonReleaseEventArgs args)
-	{
-		deck.shuffle ();
-		image2.Pixbuf = deck.getCardAt (2).GetImage ().Pixbuf;
-	}
-	
-	
-	
-	
 }

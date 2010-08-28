@@ -12,11 +12,15 @@
 
 public partial class MainWindow {
     
-    private Gtk.Fixed fixed1;
+    private Gtk.VBox vbox1;
     
-    private Gtk.EventBox eventbox1;
+    private CardLib.CardRow cardrow1;
     
-    private Gtk.Image image2;
+    private CardLib.CardRow cardrow2;
+    
+    private CardLib.CardRow cardrow3;
+    
+    private CardLib.CardRow cardrow4;
     
     protected virtual void Build() {
         Stetic.Gui.Initialize(this);
@@ -25,40 +29,60 @@ public partial class MainWindow {
         this.Title = Mono.Unix.Catalog.GetString("MainWindow");
         this.WindowPosition = ((Gtk.WindowPosition)(4));
         // Container child MainWindow.Gtk.Container+ContainerChild
-        this.fixed1 = new Gtk.Fixed();
-        this.fixed1.WidthRequest = 71;
-        this.fixed1.HeightRequest = 96;
-        this.fixed1.Events = ((Gdk.EventMask)(256));
-        this.fixed1.Name = "fixed1";
-        this.fixed1.HasWindow = false;
-        // Container child fixed1.Gtk.Fixed+FixedChild
-        this.eventbox1 = new Gtk.EventBox();
-        this.eventbox1.WidthRequest = 71;
-        this.eventbox1.HeightRequest = 96;
-        this.eventbox1.Events = ((Gdk.EventMask)(256));
-        this.eventbox1.Name = "eventbox1";
-        this.eventbox1.AboveChild = true;
-        // Container child eventbox1.Gtk.Container+ContainerChild
-        this.image2 = new Gtk.Image();
-        this.image2.WidthRequest = 71;
-        this.image2.HeightRequest = 96;
-        this.image2.Events = ((Gdk.EventMask)(768));
-        this.image2.ExtensionEvents = ((Gdk.ExtensionMode)(1));
-        this.image2.Name = "image2";
-        this.image2.Xalign = 1F;
-        this.eventbox1.Add(this.image2);
-        this.fixed1.Add(this.eventbox1);
-        Gtk.Fixed.FixedChild w2 = ((Gtk.Fixed.FixedChild)(this.fixed1[this.eventbox1]));
-        w2.X = 118;
-        w2.Y = 143;
-        this.Add(this.fixed1);
+        this.vbox1 = new Gtk.VBox();
+        this.vbox1.Name = "vbox1";
+        this.vbox1.Spacing = 6;
+        // Container child vbox1.Gtk.Box+BoxChild
+        this.cardrow1 = new CardLib.CardRow();
+        this.cardrow1.WidthRequest = 491;
+        this.cardrow1.HeightRequest = 98;
+        this.cardrow1.Events = ((Gdk.EventMask)(256));
+        this.cardrow1.Name = "cardrow1";
+        this.vbox1.Add(this.cardrow1);
+        Gtk.Box.BoxChild w1 = ((Gtk.Box.BoxChild)(this.vbox1[this.cardrow1]));
+        w1.Position = 0;
+        w1.Expand = false;
+        w1.Fill = false;
+        // Container child vbox1.Gtk.Box+BoxChild
+        this.cardrow2 = new CardLib.CardRow();
+        this.cardrow2.WidthRequest = 491;
+        this.cardrow2.HeightRequest = 98;
+        this.cardrow2.Events = ((Gdk.EventMask)(256));
+        this.cardrow2.Name = "cardrow2";
+        this.vbox1.Add(this.cardrow2);
+        Gtk.Box.BoxChild w2 = ((Gtk.Box.BoxChild)(this.vbox1[this.cardrow2]));
+        w2.Position = 1;
+        w2.Expand = false;
+        w2.Fill = false;
+        // Container child vbox1.Gtk.Box+BoxChild
+        this.cardrow3 = new CardLib.CardRow();
+        this.cardrow3.WidthRequest = 491;
+        this.cardrow3.HeightRequest = 98;
+        this.cardrow3.Events = ((Gdk.EventMask)(256));
+        this.cardrow3.Name = "cardrow3";
+        this.vbox1.Add(this.cardrow3);
+        Gtk.Box.BoxChild w3 = ((Gtk.Box.BoxChild)(this.vbox1[this.cardrow3]));
+        w3.Position = 2;
+        w3.Expand = false;
+        w3.Fill = false;
+        // Container child vbox1.Gtk.Box+BoxChild
+        this.cardrow4 = new CardLib.CardRow();
+        this.cardrow4.WidthRequest = 491;
+        this.cardrow4.HeightRequest = 98;
+        this.cardrow4.Events = ((Gdk.EventMask)(256));
+        this.cardrow4.Name = "cardrow4";
+        this.vbox1.Add(this.cardrow4);
+        Gtk.Box.BoxChild w4 = ((Gtk.Box.BoxChild)(this.vbox1[this.cardrow4]));
+        w4.Position = 3;
+        w4.Expand = false;
+        w4.Fill = false;
+        this.Add(this.vbox1);
         if ((this.Child != null)) {
             this.Child.ShowAll();
         }
         this.DefaultWidth = 559;
-        this.DefaultHeight = 354;
+        this.DefaultHeight = 458;
         this.Show();
         this.DeleteEvent += new Gtk.DeleteEventHandler(this.OnDeleteEvent);
-        this.eventbox1.ButtonReleaseEvent += new Gtk.ButtonReleaseEventHandler(this.OnEventbox1ButtonReleaseEvent);
     }
 }

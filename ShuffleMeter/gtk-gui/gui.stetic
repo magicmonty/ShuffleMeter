@@ -8,40 +8,69 @@
     <widget-library name="../../CardLib/bin/Debug/CardLib.dll" />
     <widget-library name="../bin/Debug/ShuffleMeter.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="559 354">
+  <widget class="Gtk.Window" id="MainWindow" design-size="559 458">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
-      <widget class="Gtk.Fixed" id="fixed1">
+      <widget class="Gtk.VBox" id="vbox1">
         <property name="MemberName" />
-        <property name="WidthRequest">71</property>
-        <property name="HeightRequest">96</property>
-        <property name="Events">ButtonPressMask</property>
-        <property name="HasWindow">False</property>
+        <property name="Spacing">6</property>
         <child>
-          <widget class="Gtk.EventBox" id="eventbox1">
+          <widget class="CardLib.CardRow" id="cardrow1">
             <property name="MemberName" />
-            <property name="WidthRequest">71</property>
-            <property name="HeightRequest">96</property>
+            <property name="WidthRequest">491</property>
+            <property name="HeightRequest">98</property>
             <property name="Events">ButtonPressMask</property>
-            <property name="AboveChild">True</property>
-            <signal name="ButtonReleaseEvent" handler="OnEventbox1ButtonReleaseEvent" />
-            <child>
-              <widget class="Gtk.Image" id="image2">
-                <property name="MemberName" />
-                <property name="WidthRequest">71</property>
-                <property name="HeightRequest">96</property>
-                <property name="Events">ButtonPressMask, ButtonReleaseMask</property>
-                <property name="ExtensionEvents">All</property>
-                <property name="Xalign">1</property>
-              </widget>
-            </child>
           </widget>
           <packing>
-            <property name="X">9</property>
-            <property name="Y">14</property>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="CardLib.CardRow" id="cardrow2">
+            <property name="MemberName" />
+            <property name="WidthRequest">491</property>
+            <property name="HeightRequest">98</property>
+            <property name="Events">ButtonPressMask</property>
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="CardLib.CardRow" id="cardrow3">
+            <property name="MemberName" />
+            <property name="WidthRequest">491</property>
+            <property name="HeightRequest">98</property>
+            <property name="Events">ButtonPressMask</property>
+          </widget>
+          <packing>
+            <property name="Position">2</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="CardLib.CardRow" id="cardrow4">
+            <property name="MemberName" />
+            <property name="WidthRequest">491</property>
+            <property name="HeightRequest">98</property>
+            <property name="Events">ButtonPressMask</property>
+          </widget>
+          <packing>
+            <property name="Position">3</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
           </packing>
         </child>
       </widget>
