@@ -1,16 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShuffleMeter/MainWindow.cs" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CardLib/CardRow.cs" ctype="Workbench">
     <Files>
       <File FileName="ShuffleMeter/MainWindow.cs" Line="37" Column="24" />
+      <File FileName="CardLib/CardRow.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="CardLib" expanded="True" />
-          <Node name="ShuffleMeter" expanded="True">
-            <Node name="MainWindow.cs" selected="True" />
-          </Node>
+          <Node name="ShuffleMeter" expanded="True" />
+          <Node name="ShuffleMeterTest" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -18,4 +17,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <AuthorInfo Name="Martin Gondermann" Email="magicmonty@pagansoft.de" Copyright="(c) 2010 by Martin Gondermann" ctype="AuthorInformation" />
 </Properties>

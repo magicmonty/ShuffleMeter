@@ -10,33 +10,34 @@
     <RootNamespace>CardLib</RootNamespace>
     <AssemblyName>CardLib</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <CodePage>65001</CodePage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>gtk-sharp-2.0</Package>
     </Reference>
     <Reference Include="Mono.Posix" />
   </ItemGroup>
@@ -64,64 +65,183 @@
     <Folder Include="CardImages\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CardImages\AceClubs.png" />
-    <EmbeddedResource Include="CardImages\AceSpades.png" />
-    <EmbeddedResource Include="CardImages\AceHearts.png" />
-    <EmbeddedResource Include="CardImages\AceDiamonds.png" />
-    <EmbeddedResource Include="CardImages\KingClubs.png" />
-    <EmbeddedResource Include="CardImages\KingSpades.png" />
-    <EmbeddedResource Include="CardImages\KingHearts.png" />
-    <EmbeddedResource Include="CardImages\KingDiamonds.png" />
-    <EmbeddedResource Include="CardImages\QueenClubs.png" />
-    <EmbeddedResource Include="CardImages\QueenSpades.png" />
-    <EmbeddedResource Include="CardImages\QueenHearts.png" />
-    <EmbeddedResource Include="CardImages\QueenDiamonds.png" />
-    <EmbeddedResource Include="CardImages\JackClubs.png" />
-    <EmbeddedResource Include="CardImages\JackSpades.png" />
-    <EmbeddedResource Include="CardImages\JackHearts.png" />
-    <EmbeddedResource Include="CardImages\JackDiamonds.png" />
-    <EmbeddedResource Include="CardImages\TenClubs.png" />
-    <EmbeddedResource Include="CardImages\TenSpades.png" />
-    <EmbeddedResource Include="CardImages\TenHearts.png" />
-    <EmbeddedResource Include="CardImages\TenDiamonds.png" />
-    <EmbeddedResource Include="CardImages\NineClubs.png" />
-    <EmbeddedResource Include="CardImages\NineSpades.png" />
-    <EmbeddedResource Include="CardImages\NineHearts.png" />
-    <EmbeddedResource Include="CardImages\NineDiamonds.png" />
-    <EmbeddedResource Include="CardImages\EightClubs.png" />
-    <EmbeddedResource Include="CardImages\EightSpades.png" />
-    <EmbeddedResource Include="CardImages\EightHearts.png" />
-    <EmbeddedResource Include="CardImages\EightDiamonds.png" />
-    <EmbeddedResource Include="CardImages\SevenClubs.png" />
-    <EmbeddedResource Include="CardImages\SevenSpades.png" />
-    <EmbeddedResource Include="CardImages\SevenHearts.png" />
-    <EmbeddedResource Include="CardImages\SevenDiamonds.png" />
-    <EmbeddedResource Include="CardImages\SixClubs.png" />
-    <EmbeddedResource Include="CardImages\SixSpades.png" />
-    <EmbeddedResource Include="CardImages\SixHearts.png" />
-    <EmbeddedResource Include="CardImages\SixDiamonds.png" />
-    <EmbeddedResource Include="CardImages\FiveClubs.png" />
-    <EmbeddedResource Include="CardImages\FiveSpades.png" />
-    <EmbeddedResource Include="CardImages\FiveHearts.png" />
-    <EmbeddedResource Include="CardImages\FiveDiamonds.png" />
-    <EmbeddedResource Include="CardImages\FourClubs.png" />
-    <EmbeddedResource Include="CardImages\FourSpades.png" />
-    <EmbeddedResource Include="CardImages\FourHearts.png" />
-    <EmbeddedResource Include="CardImages\FourDiamonds.png" />
-    <EmbeddedResource Include="CardImages\ThreeClubs.png" />
-    <EmbeddedResource Include="CardImages\ThreeSpades.png" />
-    <EmbeddedResource Include="CardImages\ThreeHearts.png" />
-    <EmbeddedResource Include="CardImages\ThreeDiamonds.png" />
-    <EmbeddedResource Include="CardImages\TwoClubs.png" />
-    <EmbeddedResource Include="CardImages\TwoSpades.png" />
-    <EmbeddedResource Include="CardImages\TwoHearts.png" />
-    <EmbeddedResource Include="CardImages\TwoDiamonds.png" />
-    <EmbeddedResource Include="CardImages\Joker1.png" />
-    <EmbeddedResource Include="CardImages\Joker2.png" />
-    <EmbeddedResource Include="CardImages\BackBlue.png" />
-    <EmbeddedResource Include="CardImages\BackRed.png" />
+    <EmbeddedResource Include="CardImages\AceClubs.png">
+      <LogicalName>AceClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\AceSpades.png">
+      <LogicalName>AceSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\AceHearts.png">
+      <LogicalName>AceHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\AceDiamonds.png">
+      <LogicalName>AceDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\KingClubs.png">
+      <LogicalName>KingClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\KingSpades.png">
+      <LogicalName>KingSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\KingHearts.png">
+      <LogicalName>KingHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\KingDiamonds.png">
+      <LogicalName>KingDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\QueenClubs.png">
+      <LogicalName>QueenClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\QueenSpades.png">
+      <LogicalName>QueenSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\QueenHearts.png">
+      <LogicalName>QueenHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\QueenDiamonds.png">
+      <LogicalName>QueenDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\JackClubs.png">
+      <LogicalName>JackClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\JackSpades.png">
+      <LogicalName>JackSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\JackHearts.png">
+      <LogicalName>JackHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\JackDiamonds.png">
+      <LogicalName>JackDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TenClubs.png">
+      <LogicalName>TenClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TenSpades.png">
+      <LogicalName>TenSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TenHearts.png">
+      <LogicalName>TenHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TenDiamonds.png">
+      <LogicalName>TenDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\NineClubs.png">
+      <LogicalName>NineClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\NineSpades.png">
+      <LogicalName>NineSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\NineHearts.png">
+      <LogicalName>NineHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\NineDiamonds.png">
+      <LogicalName>NineDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\EightClubs.png">
+      <LogicalName>EightClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\EightSpades.png">
+      <LogicalName>EightSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\EightHearts.png">
+      <LogicalName>EightHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\EightDiamonds.png">
+      <LogicalName>EightDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SevenClubs.png">
+      <LogicalName>SevenClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SevenSpades.png">
+      <LogicalName>SevenSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SevenHearts.png">
+      <LogicalName>SevenHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SevenDiamonds.png">
+      <LogicalName>SevenDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SixClubs.png">
+      <LogicalName>SixClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SixSpades.png">
+      <LogicalName>SixSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SixHearts.png">
+      <LogicalName>SixHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\SixDiamonds.png">
+      <LogicalName>SixDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FiveClubs.png">
+      <LogicalName>FiveClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FiveSpades.png">
+      <LogicalName>FiveSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FiveHearts.png">
+      <LogicalName>FiveHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FiveDiamonds.png">
+      <LogicalName>FiveDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FourClubs.png">
+      <LogicalName>FourClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FourSpades.png">
+      <LogicalName>FourSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FourHearts.png">
+      <LogicalName>FourHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\FourDiamonds.png">
+      <LogicalName>FourDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\ThreeClubs.png">
+      <LogicalName>ThreeClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\ThreeSpades.png">
+      <LogicalName>ThreeSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\ThreeHearts.png">
+      <LogicalName>ThreeHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\ThreeDiamonds.png">
+      <LogicalName>ThreeDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TwoClubs.png">
+      <LogicalName>TwoClubs.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TwoSpades.png">
+      <LogicalName>TwoSpades.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TwoHearts.png">
+      <LogicalName>TwoHearts.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\TwoDiamonds.png">
+      <LogicalName>TwoDiamonds.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\Joker1.png">
+      <LogicalName>Joker1.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\Joker2.png">
+      <LogicalName>Joker2.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\BackBlue.png">
+      <LogicalName>BackBlue.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardImages\BackRed.png">
+      <LogicalName>BackRed.png</LogicalName>
+    </EmbeddedResource>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <GtkDesignInfo generateGettext="false" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
 </Project>
