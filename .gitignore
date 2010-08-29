@@ -1,6 +1,6 @@
 CardLib/bin
-ShuffleMeterTest/bin
+CardLib/obj
 CardLib/*.pidb
-ShuffleMeterTest/*.pidb
 ShuffleMeter/bin
 ShuffleMeter/*.pidb
+ShuffleMeter/obj

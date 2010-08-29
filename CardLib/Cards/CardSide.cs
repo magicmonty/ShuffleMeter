@@ -47,7 +47,7 @@ namespace CardLib.Cards
 		
 		public override Gtk.Image GetImage ()
 		{
-			return Gtk.Image.LoadFromResource (string.Format ("CardLib.CardImages.{0}{1}.png", cardValue.ToString (), suit.ToString ()));
+			return Gtk.Image.LoadFromResource (string.Format ("{0}{1}.png", cardValue.ToString (), suit.ToString ()));
 		}
 	}
 
