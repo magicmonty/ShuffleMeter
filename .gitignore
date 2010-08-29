@@ -2,3 +2,5 @@ CardLib/bin
 ShuffleMeterTest/bin
 CardLib/*.pidb
 ShuffleMeterTest/*.pidb
+ShuffleMeter/bin
+ShuffleMeter/*.pidb
