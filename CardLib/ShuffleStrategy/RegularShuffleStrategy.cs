@@ -1,30 +1,26 @@
 using System;
 using CardLib.Cards;
 
-namespace CardLib
-{
-	public class RegularShuffleStrategy: AbstractShuffleStrategy
-	{
-		public RegularShuffleStrategy ()
-		{
+namespace CardLib {
+	public class RegularShuffleStrategy : AbstractShuffleStrategy {
+		public RegularShuffleStrategy() {
 		}
-		
-		public override void shuffle (CardDeck deck)
-		{
-			CardDeck tempDeck = new CardDeck ();
-			tempDeck.assign (deck);
+
+		public override void shuffle(CardDeck deck) {
+			CardDeck tempDeck = new CardDeck();
+			tempDeck.assign(deck);
 			
-			deck.clear ();
+			deck.clear();
 			
-			Random rnd = new Random ();
+			Random rnd = new Random();
 			int randomIndex;
 			
 			while (tempDeck.Count > 0) {
-				randomIndex = rnd.Next (tempDeck.Count);
+				randomIndex = rnd.Next(tempDeck.Count);
 				
-				AbstractCard card = tempDeck.getCardAt (randomIndex);
-				deck.addCard (card);
-				tempDeck.removeCardAt (randomIndex);
+				AbstractCard card = tempDeck.getCardAt(randomIndex);
+				deck.addCard(card);
+				tempDeck.removeCardAt(randomIndex);
 			}
 		}
 	}

@@ -9,7 +9,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		Default|Any CPU = Default|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5D5AD4AB-166E-4757-B31F-C554CE7A325A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -18,8 +17,6 @@ Global
 		{5D5AD4AB-166E-4757-B31F-C554CE7A325A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Default|Any CPU.ActiveCfg = Debug|Any CPU
-		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Default|Any CPU.Build.0 = Debug|Any CPU
 		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63110D45-EF0E-4EB0-BC80-E6E29487B09A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
@@ -27,7 +24,7 @@ Global
 		StartupItem = ShuffleMeter\ShuffleMeter.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
-		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$1.DirectoryNamespaceAssociation = None
 		$1.ResourceNamePolicy = FileName
 		$0.TextStylePolicy = $2
 		$2.FileWidth = 120
@@ -36,7 +33,8 @@ Global
 		$2.inheritsScope = text/plain
 		$2.scope = text/plain
 		$0.TextStylePolicy = $3
-		$3.inheritsSet = null
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
 		$3.scope = text/x-csharp
 		$0.CSharpFormattingPolicy = $4
 		$4.IndentSwitchBody = True

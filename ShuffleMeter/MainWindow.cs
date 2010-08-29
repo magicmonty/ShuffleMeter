@@ -5,17 +5,13 @@ using CardLib.Cards;
 using System.Drawing;
 using Gdk;
 
-public partial class MainWindow : Gtk.Window
-{	
+public partial class MainWindow : Gtk.Window {
 	private CardDeck deck;
-	
-	public MainWindow() : base(Gtk.WindowType.Toplevel)
-	{
+
+	public MainWindow() : base(Gtk.WindowType.Toplevel) {
 		deck = new CardDeck();
-		for (Suit s = Suit.Clubs; s <= Suit.Diamonds; s++)
-		{
-			for (CardValue v = CardValue.Ace; v <= CardValue.King; v++)
-			{
+		for (Suit s = Suit.Clubs; s <= Suit.Diamonds; s++) {
+			for (CardValue v = CardValue.Ace; v <= CardValue.King; v++) {
 				NormalCard card = new NormalCard(v, s, AbstractCard.DEFAULT_BACK_COLOR);
 				deck.addCard(card);
 			}
@@ -43,49 +39,43 @@ public partial class MainWindow : Gtk.Window
 		cardrow3.QueueDraw();
 		cardrow4.QueueDraw();
 	}
-	protected void OnDeleteEvent(object sender, DeleteEventArgs a)
-	{
+	protected void OnDeleteEvent(object sender, DeleteEventArgs a) {
 		Application.Quit();
 		a.RetVal = true;
 	}
-	
-	protected virtual void OnRegularShuffleActionActivated(object sender, System.EventArgs e)
-	{
+
+	protected virtual void OnRegularShuffleActionActivated(object sender, System.EventArgs e) {
 		this.deck.shuffleStrategy = new RegularShuffleStrategy();
 		
-		this.deck.shuffle();		
+		this.deck.shuffle();
 		this.updateDeckView();
 	}
-	
-	protected virtual void OnOutFaroActionActivated(object sender, System.EventArgs e)
-	{
+
+	protected virtual void OnOutFaroActionActivated(object sender, System.EventArgs e) {
 		this.deck.shuffleStrategy = new FaroShuffleStrategy(true, false);
 		
 		this.deck.shuffle();
 		this.updateDeckView();
 	}
-	
-	protected virtual void OnAntiOutFaroActionActivated(object sender, System.EventArgs e)
-	{
+
+	protected virtual void OnAntiOutFaroActionActivated(object sender, System.EventArgs e) {
 		this.deck.shuffleStrategy = new FaroShuffleStrategy(true, true);
 		
 		this.deck.shuffle();
 		this.updateDeckView();
 	}
-	
-	protected virtual void OnInFaroActionActivated(object sender, System.EventArgs e)
-	{
+
+	protected virtual void OnInFaroActionActivated(object sender, System.EventArgs e) {
 		this.deck.shuffleStrategy = new FaroShuffleStrategy(false, false);
 		
 		this.deck.shuffle();
 		this.updateDeckView();
 	}
-	
-	protected virtual void OnAntiInFaroActionActivated(object sender, System.EventArgs e)
-	{
+
+	protected virtual void OnAntiInFaroActionActivated(object sender, System.EventArgs e) {
 		this.deck.shuffleStrategy = new FaroShuffleStrategy(false, true);
 		
 		this.deck.shuffle();
 		this.updateDeckView();
-	}	
+	}
 }

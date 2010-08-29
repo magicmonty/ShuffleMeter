@@ -2,49 +2,41 @@ using System;
 using System.Collections.Generic;
 using CardLib.Cards;
 
-namespace CardLib
-{
-	public class CardDeck
-	{
+namespace CardLib {
+	public class CardDeck {
 		protected List<AbstractCard> cardStack;
 		public AbstractShuffleStrategy shuffleStrategy;
 
 		public int Count {
 			get { return this.cardStack.Count; }
 		}
-		
-		public CardDeck ()
-		{
-			cardStack = new List<AbstractCard> ();
-			this.shuffleStrategy = new RegularShuffleStrategy ();
+
+		public CardDeck() {
+			cardStack = new List<AbstractCard>();
+			this.shuffleStrategy = new RegularShuffleStrategy();
 		}
 
-		public void addCard (AbstractCard card)
-		{
-			cardStack.Add (card);
+		public void addCard(AbstractCard card) {
+			cardStack.Add(card);
 		}
 
-		public void shuffle ()
-		{
+		public void shuffle() {
 			if (this.shuffleStrategy != null) {
-				this.shuffleStrategy.shuffle (this);
+				this.shuffleStrategy.shuffle(this);
 			}
 		}
-		
-		public void assign (CardDeck source)
-		{
-			this.clear ();
-			foreach (AbstractCard card in source.cardStack)
-			{
-				this.cardStack.Add (card);
+
+		public void assign(CardDeck source) {
+			this.clear();
+			foreach (AbstractCard card in source.cardStack) {
+				this.cardStack.Add(card);
 			}
 		}
-		
-		public void clear ()
-		{
+
+		public void clear() {
 			this.cardStack.Clear();
 		}
-		
+
 		public AbstractCard getCardAt(int index) {
 			if ((index >= 0) && (index < this.Count)) {
 				return this.cardStack[index];
@@ -52,32 +44,26 @@ namespace CardLib
 				return null;
 			}
 		}
-		
-		public void removeCardAt (int index)
-		{
-			this.cardStack.RemoveAt (index);
+
+		public void removeCardAt(int index) {
+			this.cardStack.RemoveAt(index);
 		}
-		
-		public override string ToString ()
-		{
+
+		public override string ToString() {
 			String tmp = "";
-			foreach (AbstractCard card in cardStack)
-			{
+			foreach (AbstractCard card in cardStack) {
 				tmp = tmp + card.ToString() + "\n";
 			}
-
-			tmp = tmp.Trim ();
+			
+			tmp = tmp.Trim();
 			return tmp.Equals("") ? "Empty deck" : tmp;
 		}
 
-		public void initEmptyDeck (int count)
-		{
+		public void initEmptyDeck(int count) {
 			this.clear();
-			if (count > 0)
-			{
-				for (int i = 0; i < count; i++)
-				{
-					this.addCard (new NormalCard ());
+			if (count > 0) {
+				for (int i = 0; i < count; i++) {
+					this.addCard(new NormalCard());
 				}
 			}
 		}

@@ -1,18 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ShuffleMeter/MainWindow.cs" ctype="Workbench">
-    <Files>
-      <File FileName="CardLib/CardRow.cs" Line="1" Column="1" />
-      <File FileName="ShuffleMeter/MainWindow.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench ctype="Workbench">
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="CardLib" expanded="True" selected="True">
-            <Node name="Cards" expanded="True" />
-          </Node>
+          <Node name="CardLib" expanded="True" />
           <Node name="ShuffleMeter" expanded="True">
-            <Node name="References" expanded="True" />
+            <Node name="AssemblyInfo.cs" selected="True" />
           </Node>
         </State>
       </Pad>

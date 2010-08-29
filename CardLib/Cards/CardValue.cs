@@ -1,10 +1,8 @@
 
 using System;
 
-namespace CardLib.Cards
-{
-	public enum CardValue
-	{
+namespace CardLib.Cards {
+	public enum CardValue {
 		Ace,
 		Two,
 		Three,
