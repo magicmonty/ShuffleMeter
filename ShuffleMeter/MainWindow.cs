@@ -12,7 +12,7 @@ public partial class MainWindow : Gtk.Window
 	public MainWindow() : base(Gtk.WindowType.Toplevel)
 	{
 		deck = new CardDeck();
-		for (Suit s = Suit.Clubs; s <= Suit.Spades; s++)
+		for (Suit s = Suit.Clubs; s <= Suit.Diamonds; s++)
 		{
 			for (CardValue v = CardValue.Ace; v <= CardValue.King; v++)
 			{
@@ -27,7 +27,7 @@ public partial class MainWindow : Gtk.Window
 		cardrow1.SetQuarter(0);
 		cardrow2.SetQuarter(1);
 		cardrow3.SetQuarter(2);
-		cardrow4.SetQuarter(2);
+		cardrow4.SetQuarter(3);
 		
 		updateDeckView();
 	}
