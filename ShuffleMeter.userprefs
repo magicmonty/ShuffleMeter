@@ -3,17 +3,14 @@
   <MonoDevelop.Ide.Workbench ctype="Workbench">
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="CardLib" expanded="True" />
-          <Node name="ShuffleMeter" expanded="True">
-            <Node name="AssemblyInfo.cs" selected="True" />
-          </Node>
+          <Node name="ShuffleMeter" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
-        <State selected="True" />
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <AuthorInfo Name="Martin Gondermann" Email="magicmonty@pagansoft.de" Copyright="(c) 2010 by Martin Gondermann" ctype="AuthorInformation" />
 </Properties>
