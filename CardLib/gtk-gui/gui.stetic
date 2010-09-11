@@ -2,7 +2,7 @@
 <stetic-interface>
   <configuration>
     <images-root-path>..</images-root-path>
-    <target-gtk-version>2.12</target-gtk-version>
+    <target-gtk-version>2.10</target-gtk-version>
   </configuration>
   <import>
     <widget-library name="../bin/Debug/CardLib.dll" internal="true" />
@@ -13,9 +13,14 @@
     <property name="HeightRequest">98</property>
     <property name="Visible">False</property>
     <child>
-      <widget class="Gtk.DrawingArea" id="drawingarea1">
+      <widget class="Gtk.EventBox" id="eventbox1">
         <property name="MemberName" />
-        <signal name="ExposeEvent" handler="OnDrawingarea1ExposeEvent" />
+        <child>
+          <widget class="Gtk.DrawingArea" id="drawingarea1">
+            <property name="MemberName" />
+            <signal name="ExposeEvent" handler="OnDrawingarea1ExposeEvent" />
+          </widget>
+        </child>
       </widget>
     </child>
   </widget>

@@ -1,10 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CardLib/Cards/AbstractCard.cs" ctype="Workbench">
+    <Files>
+      <File FileName="CardLib/CardRow.cs" Line="49" Column="1" />
+      <File FileName="CardLib/Cards/AbstractCard.cs" Line="43" Column="1" />
+      <File FileName="CardLib/Cards/CardSide.cs" Line="100" Column="19" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
-          <Node name="CardLib" expanded="True" />
+        <State expanded="True">
+          <Node name="CardLib" expanded="True">
+            <Node name="Cards" expanded="True">
+              <Node name="AbstractCard.cs" selected="True" />
+            </Node>
+          </Node>
           <Node name="ShuffleMeter" expanded="True" />
         </State>
       </Pad>

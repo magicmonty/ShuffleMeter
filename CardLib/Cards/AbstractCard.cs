@@ -14,30 +14,36 @@ namespace CardLib.Cards {
 
 		public int mark { get; set; }
 		public bool faceUp { get; set; }
+		public bool hover { get; set; }
 
 		public AbstractCard() {
 			this.faceSide = null;
 			this.backSide = null;
 			this.mark = MARK_NONE;
 			this.faceUp = true;
+			this.hover = false;
 		}
 
-		public void Draw(Graphics context, int x, int y, double scale) {
+		public Gdk.Pixbuf GetPixbuf() {
+			Gdk.Pixbuf result = null;
+			Gdk.Pixbuf original = null;
+			
 			if ((this.faceSide != null) && (this.faceUp)) {
-				this.faceSide.Draw(context, x, y, scale);
+				original = this.faceSide.GetPixbuf();
 			} else if ((this.backSide != null) && (!this.faceUp)) {
-				this.backSide.Draw(context, x, y, scale);
-			}
-		}
-
-		public Gtk.Image GetImage() {
-			if ((this.faceSide != null) && (this.faceUp)) {
-				return this.faceSide.GetImage();
-			} else if ((this.backSide != null) && (!this.faceUp)) {
-				return this.backSide.GetImage();
+				original = this.backSide.GetPixbuf();
 			}
 			
-			return null;
+			if (original != null) {
+				result = (Gdk.Pixbuf) original.Clone();
+				if (!hover) {
+					Gtk.Image img = this.faceSide.GetImage();
+					Gdk.Image img2 = null;
+					Gdk.Pixmap mask = null;
+				}
+			}
+			
+			return result;
 		}
 
 		public void Assign(AbstractCard card) {

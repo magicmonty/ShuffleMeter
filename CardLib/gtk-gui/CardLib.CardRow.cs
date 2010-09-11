@@ -13,6 +13,8 @@ namespace CardLib {
     
     public partial class CardRow {
         
+        private Gtk.EventBox eventbox1;
+        
         private Gtk.DrawingArea drawingarea1;
         
         protected virtual void Build() {
@@ -23,9 +25,13 @@ namespace CardLib {
             this.HeightRequest = 98;
             this.Name = "CardLib.CardRow";
             // Container child CardLib.CardRow.Gtk.Container+ContainerChild
+            this.eventbox1 = new Gtk.EventBox();
+            this.eventbox1.Name = "eventbox1";
+            // Container child eventbox1.Gtk.Container+ContainerChild
             this.drawingarea1 = new Gtk.DrawingArea();
             this.drawingarea1.Name = "drawingarea1";
-            this.Add(this.drawingarea1);
+            this.eventbox1.Add(this.drawingarea1);
+            this.Add(this.eventbox1);
             if ((this.Child != null)) {
                 this.Child.ShowAll();
             }

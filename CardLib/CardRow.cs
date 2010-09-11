@@ -39,15 +39,12 @@ namespace CardLib {
 					AbstractCard card = this.Deck.getCardAt(i + startIndex);
 					
 					if (card != null) {
-						win.DrawPixbuf(gc, card.GetImage().Pixbuf, 0, 0, i * 35, 0, 71, 98, Gdk.RgbDither.Normal, 0,
-						0);
+						win.DrawPixbuf(gc, card.GetPixbuf(), 0, 0, i * 35, 0, 71, 98, Gdk.RgbDither.Normal, 0, 0);
 					}
 				}
 				
 				args.RetVal = true;
 			}
 		}
-		
-		
 	}
 }

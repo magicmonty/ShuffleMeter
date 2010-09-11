@@ -1,13 +1,42 @@
 using System;
 using System.Drawing;
 using Gtk;
+using Gdk;
 
 namespace CardLib.Cards {
 
 	public abstract class AbstractSide {
-		public abstract void Draw(Graphics context, int x, int y, double scale);
 		public abstract void Assign(AbstractSide source);
+		public abstract Gdk.Pixbuf GetPixbuf();
 		public abstract Gtk.Image GetImage();
+		
+		protected Gtk.Image GetImageFromResource(string resourceName) {
+			Gtk.Image result = null;
+			try {
+				result = Gtk.Image.LoadFromResource(resourceName);
+			} catch {
+				result = null;
+			}
+			
+			return result;
+		}
+		
+		protected Gdk.Pixbuf GetPixbufFromResource(string resourceName) {
+			Gdk.Pixbuf result = null;
+			Gtk.Image resImg = GetImageFromResource(resourceName);
+
+			if (resImg != null) {
+				try {
+					result = resImg.Pixbuf;
+				} catch {
+					result = null;
+				}
+			} else {
+				result = null;
+			}
+			
+			return result;
+		}
 	}
 
 	class CardSide : AbstractSide {
@@ -22,10 +51,6 @@ namespace CardLib.Cards {
 			this.suit = aCardSuit;
 		}
 
-		public override void Draw(Graphics context, int x, int y, double scale) {
-			throw new System.NotImplementedException();
-		}
-
 		public override string ToString() {
 			return string.Format("{0} of {1}", cardValue.ToString(), suit.ToString());
 		}
@@ -37,28 +62,27 @@ namespace CardLib.Cards {
 			}
 		}
 
-		public override Gtk.Image GetImage() {
-			return Gtk.Image.LoadFromResource(string.Format("{0}{1}.png", cardValue.ToString(), suit.ToString()));
+		public override Gdk.Pixbuf GetPixbuf () {
+			return GetPixbufFromResource(string.Format("{0}{1}.png", cardValue.ToString(), suit.ToString()));
+		}
+		
+		public override Gtk.Image GetImage () {
+			return GetImageFromResource(string.Format("{0}{1}.png", cardValue.ToString(), suit.ToString()));
 		}
 	}
 
 	class BackSide : AbstractSide {
-		public Color backColor { get; set; }
+		public System.Drawing.Color backColor { get; set; }
 
-		public BackSide() : this(Color.Blue) {
+		public BackSide() : this(System.Drawing.Color.Blue) {
 			
 		}
 
-		public BackSide(Color aColor) {
+		public BackSide(System.Drawing.Color aColor) {
 			this.backColor = aColor;
 		}
 
-		public override void Draw(Graphics context, int x, int y, double scale) {
-			throw new System.NotImplementedException();
-		}
-
-		public override string ToString() {
-			
+		public override string ToString() {			
 			return string.Format("{0} back", backColor.Name);
 		}
 
@@ -68,8 +92,12 @@ namespace CardLib.Cards {
 			}
 		}
 
-		public override Gtk.Image GetImage() {
-			return Gtk.Image.LoadFromResource(string.Format("CardLib.CardImages.Back{0}.png", backColor.Name));
+		public override Gdk.Pixbuf GetPixbuf () {
+			return GetPixbufFromResource(string.Format("CardLib.CardImages.Back{0}.png", backColor.Name));
+		}
+		
+		public override Gtk.Image GetImage () {
+			return GetImageFromResource(string.Format("CardLib.CardImages.Back{0}.png", backColor.Name));
 		}
 	}
 	
