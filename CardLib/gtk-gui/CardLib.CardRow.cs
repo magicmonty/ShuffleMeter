@@ -26,6 +26,7 @@ namespace CardLib {
             this.Name = "CardLib.CardRow";
             // Container child CardLib.CardRow.Gtk.Container+ContainerChild
             this.eventbox1 = new Gtk.EventBox();
+            this.eventbox1.Events = ((Gdk.EventMask)(4));
             this.eventbox1.Name = "eventbox1";
             // Container child eventbox1.Gtk.Container+ContainerChild
             this.drawingarea1 = new Gtk.DrawingArea();
@@ -36,6 +37,8 @@ namespace CardLib {
                 this.Child.ShowAll();
             }
             this.Hide();
+            this.eventbox1.MotionNotifyEvent += new Gtk.MotionNotifyEventHandler(this.OnEventbox1MotionNotifyEvent);
+            this.eventbox1.LeaveNotifyEvent += new Gtk.LeaveNotifyEventHandler(this.OnEventbox1LeaveNotifyEvent);
             this.drawingarea1.ExposeEvent += new Gtk.ExposeEventHandler(this.OnDrawingarea1ExposeEvent);
         }
     }

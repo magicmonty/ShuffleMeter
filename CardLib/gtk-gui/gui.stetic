@@ -15,6 +15,9 @@
     <child>
       <widget class="Gtk.EventBox" id="eventbox1">
         <property name="MemberName" />
+        <property name="Events">PointerMotionMask</property>
+        <signal name="MotionNotifyEvent" handler="OnEventbox1MotionNotifyEvent" />
+        <signal name="LeaveNotifyEvent" handler="OnEventbox1LeaveNotifyEvent" />
         <child>
           <widget class="Gtk.DrawingArea" id="drawingarea1">
             <property name="MemberName" />

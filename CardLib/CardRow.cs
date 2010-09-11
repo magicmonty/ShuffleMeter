@@ -46,5 +46,43 @@ namespace CardLib {
 				args.RetVal = true;
 			}
 		}
+		
+		protected virtual void OnEventbox1MotionNotifyEvent (object o, Gtk.MotionNotifyEventArgs args)
+		{
+			int index = GetCardIndexByMousePosition(args.Event.X, args.Event.Y);
+			for (int i = 0; i < this.Deck.Count; i++) {				
+				this.Deck.getCardAt(i).hover = (index == i);
+			}
+			this.QueueDraw();
+		}
+		
+		private int GetCardIndexByMousePosition(double X, double Y) {
+			if ((Y >= 0) 
+			    && (Y <= this.SizeRequest().Height) 
+			    && (X >= 0) 
+			    && (X <= this.SizeRequest().Width)) {
+				int result = (int) X / 35;
+			
+				if (result > 12) {
+					result = 12;
+				}
+				
+				return 13 * this.Quarter + result;
+			}
+				
+			return -1;
+			
+		}
+		
+		protected virtual void OnEventbox1LeaveNotifyEvent (object o, Gtk.LeaveNotifyEventArgs args)
+		{
+			for (int i = 0; i < this.Deck.Count; i++) {				
+				this.Deck.getCardAt(i).hover = false;
+			}
+			this.QueueDraw();
+		}
+		
+		
+		
 	}
 }

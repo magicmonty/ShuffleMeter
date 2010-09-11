@@ -28,6 +28,7 @@ namespace CardLib.Cards {
 			Gdk.Pixbuf result = null;
 			Gdk.Pixbuf original = null;
 			
+			
 			if ((this.faceSide != null) && (this.faceUp)) {
 				original = this.faceSide.GetPixbuf();
 			} else if ((this.backSide != null) && (!this.faceUp)) {
@@ -36,10 +37,11 @@ namespace CardLib.Cards {
 			
 			if (original != null) {
 				result = (Gdk.Pixbuf) original.Clone();
-				if (!hover) {
-					Gtk.Image img = this.faceSide.GetImage();
-					Gdk.Image img2 = null;
-					Gdk.Pixmap mask = null;
+				
+				if (hover) {					
+					Gtk.Image tint = new Gtk.Image((Gdk.Pixbuf) result.Clone());
+					tint.Pixbuf.Fill(0x0000ff80);
+					tint.Pixbuf.Composite(result, 0, 0, result.Width, result.Height, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 128);
 				}
 			}
 			
