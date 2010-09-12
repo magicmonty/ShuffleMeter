@@ -4,6 +4,9 @@ using System.Drawing;
 namespace CardLib.Cards {
 
 	public abstract class AbstractCard {
+		public static int CARD_WIDTH = 71;
+		public static int CARD_HEIGHT = 98;
+		
 		public static int MARK_NONE = -1;
 		public static CardValue DEFAULT_CARD_VALUE = CardValue.Ace;
 		public static Suit DEFAULT_SUIT = Suit.Clubs;

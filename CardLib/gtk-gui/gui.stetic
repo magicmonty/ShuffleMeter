@@ -9,18 +9,19 @@
   </import>
   <widget class="Gtk.Bin" id="CardLib.CardRow" design-size="491 300">
     <property name="MemberName" />
-    <property name="WidthRequest">491</property>
-    <property name="HeightRequest">98</property>
+    <property name="HeightRequest">108</property>
     <property name="Visible">False</property>
     <child>
       <widget class="Gtk.EventBox" id="eventbox1">
         <property name="MemberName" />
         <property name="Events">PointerMotionMask</property>
+        <property name="BorderWidth">5</property>
         <signal name="MotionNotifyEvent" handler="OnEventbox1MotionNotifyEvent" />
         <signal name="LeaveNotifyEvent" handler="OnEventbox1LeaveNotifyEvent" />
         <child>
           <widget class="Gtk.DrawingArea" id="drawingarea1">
             <property name="MemberName" />
+            <property name="HeightRequest">98</property>
             <signal name="ExposeEvent" handler="OnDrawingarea1ExposeEvent" />
           </widget>
         </child>

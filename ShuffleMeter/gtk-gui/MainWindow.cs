@@ -81,7 +81,7 @@ public partial class MainWindow {
         // Container child MainWindow.Gtk.Container+ContainerChild
         this.vbox1 = new Gtk.VBox();
         this.vbox1.Name = "vbox1";
-        this.vbox1.Spacing = 6;
+        this.vbox1.Spacing = 3;
         // Container child vbox1.Gtk.Box+BoxChild
         this.UIManager.AddUiFromString("<ui><menubar name='menubar1'><menu name='DateiAction' action='DateiAction'><menuitem name='ExitAction' action='ExitAction'/></menu><menu name='ShuffleAction' action='ShuffleAction'><menuitem name='RegularShuffleAction' action='RegularShuffleAction'/><menuitem name='InFaroAction' action='InFaroAction'/><menuitem name='AntiInFaroAction' action='AntiInFaroAction'/><menuitem name='OutFaroAction' action='OutFaroAction'/><menuitem name='AntiOutFaroAction' action='AntiOutFaroAction'/></menu></menubar></ui>");
         this.menubar1 = ((Gtk.MenuBar)(this.UIManager.GetWidget("/menubar1")));
@@ -93,8 +93,7 @@ public partial class MainWindow {
         w2.Fill = false;
         // Container child vbox1.Gtk.Box+BoxChild
         this.cardrow1 = new CardLib.CardRow();
-        this.cardrow1.WidthRequest = 491;
-        this.cardrow1.HeightRequest = 98;
+        this.cardrow1.HeightRequest = 108;
         this.cardrow1.Events = ((Gdk.EventMask)(256));
         this.cardrow1.Name = "cardrow1";
         this.vbox1.Add(this.cardrow1);
@@ -104,8 +103,7 @@ public partial class MainWindow {
         w3.Fill = false;
         // Container child vbox1.Gtk.Box+BoxChild
         this.cardrow2 = new CardLib.CardRow();
-        this.cardrow2.WidthRequest = 491;
-        this.cardrow2.HeightRequest = 98;
+        this.cardrow2.HeightRequest = 108;
         this.cardrow2.Events = ((Gdk.EventMask)(256));
         this.cardrow2.Name = "cardrow2";
         this.vbox1.Add(this.cardrow2);
@@ -115,8 +113,7 @@ public partial class MainWindow {
         w4.Fill = false;
         // Container child vbox1.Gtk.Box+BoxChild
         this.cardrow3 = new CardLib.CardRow();
-        this.cardrow3.WidthRequest = 491;
-        this.cardrow3.HeightRequest = 98;
+        this.cardrow3.HeightRequest = 108;
         this.cardrow3.Events = ((Gdk.EventMask)(256));
         this.cardrow3.Name = "cardrow3";
         this.vbox1.Add(this.cardrow3);
@@ -126,8 +123,7 @@ public partial class MainWindow {
         w5.Fill = false;
         // Container child vbox1.Gtk.Box+BoxChild
         this.cardrow4 = new CardLib.CardRow();
-        this.cardrow4.WidthRequest = 491;
-        this.cardrow4.HeightRequest = 98;
+        this.cardrow4.HeightRequest = 108;
         this.cardrow4.Events = ((Gdk.EventMask)(256));
         this.cardrow4.Name = "cardrow4";
         this.vbox1.Add(this.cardrow4);
@@ -149,8 +145,8 @@ public partial class MainWindow {
         if ((this.Child != null)) {
             this.Child.ShowAll();
         }
-        this.DefaultWidth = 559;
-        this.DefaultHeight = 540;
+        this.DefaultWidth = 628;
+        this.DefaultHeight = 525;
         this.Show();
         this.DeleteEvent += new Gtk.DeleteEventHandler(this.OnDeleteEvent);
         this.RegularShuffleAction.Activated += new System.EventHandler(this.OnRegularShuffleActionActivated);

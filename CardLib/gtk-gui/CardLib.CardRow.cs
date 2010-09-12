@@ -21,15 +21,16 @@ namespace CardLib {
             Stetic.Gui.Initialize(this);
             // Widget CardLib.CardRow
             Stetic.BinContainer.Attach(this);
-            this.WidthRequest = 491;
-            this.HeightRequest = 98;
+            this.HeightRequest = 108;
             this.Name = "CardLib.CardRow";
             // Container child CardLib.CardRow.Gtk.Container+ContainerChild
             this.eventbox1 = new Gtk.EventBox();
             this.eventbox1.Events = ((Gdk.EventMask)(4));
             this.eventbox1.Name = "eventbox1";
+            this.eventbox1.BorderWidth = ((uint)(5));
             // Container child eventbox1.Gtk.Container+ContainerChild
             this.drawingarea1 = new Gtk.DrawingArea();
+            this.drawingarea1.HeightRequest = 98;
             this.drawingarea1.Name = "drawingarea1";
             this.eventbox1.Add(this.drawingarea1);
             this.Add(this.eventbox1);

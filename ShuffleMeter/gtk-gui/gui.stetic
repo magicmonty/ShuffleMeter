@@ -2,13 +2,13 @@
 <stetic-interface>
   <configuration>
     <images-root-path>..</images-root-path>
-    <target-gtk-version>2.12</target-gtk-version>
+    <target-gtk-version>2.10</target-gtk-version>
   </configuration>
   <import>
     <widget-library name="../../CardLib/bin/Debug/CardLib.dll" />
     <widget-library name="../bin/Debug/ShuffleMeter.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="559 540">
+  <widget class="Gtk.Window" id="MainWindow" design-size="628 525">
     <action-group name="Default">
       <action id="DateiAction">
         <property name="Type">Action</property>
@@ -63,7 +63,7 @@
     <child>
       <widget class="Gtk.VBox" id="vbox1">
         <property name="MemberName" />
-        <property name="Spacing">6</property>
+        <property name="Spacing">3</property>
         <child>
           <widget class="Gtk.MenuBar" id="menubar1">
             <property name="MemberName" />
@@ -90,8 +90,7 @@
         <child>
           <widget class="CardLib.CardRow" id="cardrow1">
             <property name="MemberName" />
-            <property name="WidthRequest">491</property>
-            <property name="HeightRequest">98</property>
+            <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
           </widget>
           <packing>
@@ -104,8 +103,7 @@
         <child>
           <widget class="CardLib.CardRow" id="cardrow2">
             <property name="MemberName" />
-            <property name="WidthRequest">491</property>
-            <property name="HeightRequest">98</property>
+            <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
           </widget>
           <packing>
@@ -118,8 +116,7 @@
         <child>
           <widget class="CardLib.CardRow" id="cardrow3">
             <property name="MemberName" />
-            <property name="WidthRequest">491</property>
-            <property name="HeightRequest">98</property>
+            <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
           </widget>
           <packing>
@@ -132,8 +129,7 @@
         <child>
           <widget class="CardLib.CardRow" id="cardrow4">
             <property name="MemberName" />
-            <property name="WidthRequest">491</property>
-            <property name="HeightRequest">98</property>
+            <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
           </widget>
           <packing>

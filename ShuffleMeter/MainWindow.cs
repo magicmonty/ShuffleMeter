@@ -9,35 +9,22 @@ public partial class MainWindow : Gtk.Window {
 	private CardDeck deck;
 
 	public MainWindow() : base(Gtk.WindowType.Toplevel) {
-		deck = new CardDeck();
-		for (Suit s = Suit.Clubs; s <= Suit.Diamonds; s++) {
-			for (CardValue v = CardValue.Ace; v <= CardValue.King; v++) {
-				NormalCard card = new NormalCard(v, s, AbstractCard.DEFAULT_BACK_COLOR);
-				deck.addCard(card);
-			}
-		}
-		
-		
 		Build();
-		
-		cardrow1.SetQuarter(0);
-		cardrow2.SetQuarter(1);
-		cardrow3.SetQuarter(2);
-		cardrow4.SetQuarter(3);
-		
+		deck = CardDeck.FromNewDeckOrder();
+				
 		updateDeckView();
 	}
 
 	private void updateDeckView() {
-		cardrow1.SetDeck(this.deck);
-		cardrow2.SetDeck(this.deck);
-		cardrow3.SetDeck(this.deck);
-		cardrow4.SetDeck(this.deck);
-		
-		cardrow1.QueueDraw();
-		cardrow2.QueueDraw();
-		cardrow3.QueueDraw();
-		cardrow4.QueueDraw();
+	  cardrow1.SetDeck(this.deck);
+	  cardrow2.SetDeck(this.deck);
+	  cardrow3.SetDeck(this.deck);
+	  cardrow4.SetDeck(this.deck);
+	  cardrow1.SetQuarter(DeckQuarter.First);
+    cardrow2.SetQuarter(DeckQuarter.Second);
+    cardrow3.SetQuarter(DeckQuarter.Third);
+    cardrow4.SetQuarter(DeckQuarter.Fourth);
+
 	}
 	protected void OnDeleteEvent(object sender, DeleteEventArgs a) {
 		Application.Quit();
