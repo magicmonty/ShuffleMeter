@@ -4,3 +4,4 @@ CardLib/*.pidb
 ShuffleMeter/bin
 ShuffleMeter/*.pidb
 ShuffleMeter/obj
+*.userprefs
