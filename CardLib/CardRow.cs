@@ -12,6 +12,8 @@ namespace CardLib {
     Fourth = 3
   }
 
+  public delegate void CardClickedEventHandler(object sender, int cardIndex);
+  
   [System.ComponentModel.ToolboxItem(true)]
   public partial class CardRow : Gtk.Bin {
     private CardDeck Deck;
@@ -19,6 +21,8 @@ namespace CardLib {
     private int ToIndex;
     private int CardCount;
     private int CardOffset;
+
+    public event CardClickedEventHandler OnCardClicked;
 
     public CardRow() {
       this.Deck = CardDeck.FromNewDeckOrder();
@@ -194,5 +198,12 @@ namespace CardLib {
       this.QueueDraw();
     }
 
+    protected virtual void OnEventbox1ButtonPressEvent (object o, Gtk.ButtonPressEventArgs args)
+    {
+      int index = GetCardIndexByMousePosition(args.Event.X, args.Event.Y);
+      if ((index >= 0) && (OnCardClicked != null)) {
+        OnCardClicked(this, index);
+      }
+    }
   }
 }

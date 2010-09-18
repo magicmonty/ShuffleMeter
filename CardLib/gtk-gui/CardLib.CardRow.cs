@@ -40,6 +40,7 @@ namespace CardLib {
             this.Hide();
             this.eventbox1.MotionNotifyEvent += new Gtk.MotionNotifyEventHandler(this.OnEventbox1MotionNotifyEvent);
             this.eventbox1.LeaveNotifyEvent += new Gtk.LeaveNotifyEventHandler(this.OnEventbox1LeaveNotifyEvent);
+            this.eventbox1.ButtonPressEvent += new Gtk.ButtonPressEventHandler(this.OnEventbox1ButtonPressEvent);
             this.drawingarea1.ExposeEvent += new Gtk.ExposeEventHandler(this.OnDrawingarea1ExposeEvent);
         }
     }

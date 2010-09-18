@@ -18,6 +18,7 @@
         <property name="BorderWidth">5</property>
         <signal name="MotionNotifyEvent" handler="OnEventbox1MotionNotifyEvent" />
         <signal name="LeaveNotifyEvent" handler="OnEventbox1LeaveNotifyEvent" />
+        <signal name="ButtonPressEvent" handler="OnEventbox1ButtonPressEvent" />
         <child>
           <widget class="Gtk.DrawingArea" id="drawingarea1">
             <property name="MemberName" />
