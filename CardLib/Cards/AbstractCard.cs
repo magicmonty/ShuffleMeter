@@ -12,8 +12,8 @@ namespace CardLib.Cards {
 		public static Suit DEFAULT_SUIT = Suit.Clubs;
 		public static Color DEFAULT_BACK_COLOR = Color.Blue;
 
-		protected AbstractSide faceSide { get; set; }
-		protected AbstractSide backSide { get; set; }
+		public AbstractSide faceSide { get; set; }
+		public AbstractSide backSide { get; set; }
 
 		public int mark { get; set; }
 		public bool faceUp { get; set; }
@@ -63,6 +63,10 @@ namespace CardLib.Cards {
 			} else {
 				this.backSide.Assign(card.backSide);
 			}
+
+      this.mark = card.mark;
+      this.faceUp = card.faceUp;
+      this.hover = card.hover;
 		}
 		
 	}
