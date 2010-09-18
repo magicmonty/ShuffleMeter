@@ -154,5 +154,9 @@ public partial class MainWindow {
         this.OutFaroAction.Activated += new System.EventHandler(this.OnOutFaroActionActivated);
         this.AntiInFaroAction.Activated += new System.EventHandler(this.OnAntiInFaroActionActivated);
         this.AntiOutFaroAction.Activated += new System.EventHandler(this.OnAntiOutFaroActionActivated);
+        this.cardrow1.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
+        this.cardrow2.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
+        this.cardrow3.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
+        this.cardrow4.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
     }
 }

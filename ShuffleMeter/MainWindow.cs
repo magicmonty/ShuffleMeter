@@ -65,4 +65,12 @@ public partial class MainWindow : Gtk.Window {
 		this.deck.shuffle();
 		this.updateDeckView();
 	}
-}
+
+  protected virtual void OnCardrowCardClicked (object sender, int cardIndex)
+  {
+    this.deck.getCardAt(cardIndex).faceUp = !this.deck.getCardAt(cardIndex).faceUp;
+    this.updateDeckView();
+  }
+
+
+ }
