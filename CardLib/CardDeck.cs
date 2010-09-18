@@ -5,7 +5,7 @@ using CardLib.Cards;
 namespace CardLib {
   public class CardDeck {
     protected List<AbstractCard> cardStack;
-    public AbstractShuffleStrategy shuffleStrategy;
+    public IShuffleStrategy shuffleStrategy;
 
     public int Count {
       get { return this.cardStack.Count; }

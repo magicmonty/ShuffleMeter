@@ -3,7 +3,7 @@ using CardLib.Cards;
 using System.Collections.Generic;
 
 namespace CardLib {
-	public class FaroShuffleStrategy : AbstractShuffleStrategy {
+	public class FaroShuffleStrategy : IShuffleStrategy {
 		private bool OutFaro;
 		private bool AntiFaro;
 
@@ -12,7 +12,7 @@ namespace CardLib {
 			this.AntiFaro = AntiFaro;
 		}
 
-		public override void shuffle(CardDeck deck) {
+		public void shuffle(CardDeck deck) {
 			List<AbstractCard> help = new List<AbstractCard>();
 			for (int i = 0; i < deck.Count; i++) {
 				help.Add(new NormalCard());

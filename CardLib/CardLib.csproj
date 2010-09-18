@@ -55,12 +55,12 @@
     <Compile Include="Cards\DoubleFacedCard.cs" />
     <Compile Include="Cards\NormalCard.cs" />
     <Compile Include="Cards\Suit.cs" />
-    <Compile Include="ShuffleStrategy\AbstractShuffleStrategy.cs" />
     <Compile Include="ShuffleStrategy\RegularShuffleStrategy.cs" />
     <Compile Include="ShuffleStrategy\FaroShuffleStrategy.cs" />
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="CardRow.cs" />
     <Compile Include="gtk-gui\CardLib.CardRow.cs" />
+    <Compile Include="ShuffleStrategy\IShuffleStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -230,12 +230,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CardImages\Joker2.png">
       <LogicalName>Joker2.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CardImages\BackBlue.png">
-      <LogicalName>BackBlue.png</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CardImages\BackRed.png">
-      <LogicalName>BackRed.png</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
       <LogicalName>gui.stetic</LogicalName>

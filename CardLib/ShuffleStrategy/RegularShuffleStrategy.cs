@@ -2,11 +2,11 @@ using System;
 using CardLib.Cards;
 
 namespace CardLib {
-	public class RegularShuffleStrategy : AbstractShuffleStrategy {
+	public class RegularShuffleStrategy : IShuffleStrategy {
 		public RegularShuffleStrategy() {
 		}
 
-		public override void shuffle(CardDeck deck) {
+		public void shuffle(CardDeck deck) {
 			CardDeck tempDeck = new CardDeck();
 			tempDeck.assign(deck);
 			
