@@ -83,7 +83,7 @@ namespace CardLib.Cards {
 		}
 
 		public override string ToString() {			
-			return string.Format("{0} back", backColor.Name);
+			return string.Format("{0} Back", backColor.Name);
 		}
 
 		public override void Assign(AbstractSide source) {
@@ -93,11 +93,20 @@ namespace CardLib.Cards {
 		}
 
 		public override Gdk.Pixbuf GetPixbuf () {
-			return GetPixbufFromResource(string.Format("CardLib.CardImages.Back{0}.png", backColor.Name));
+			Gdk.Pixbuf result = GetPixbufFromResource("Back.png");
+
+      if (result != null) {
+        Gtk.Image tint = new Gtk.Image((Gdk.Pixbuf) result.Clone());
+        int color = (backColor.R << 24) + (backColor.G << 16) + (backColor.B << 8) + backColor.A;
+        tint.Pixbuf.Fill((uint) color);
+        tint.Pixbuf.Composite(result, 4, 4, result.Width - 8, result.Height - 8, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 185);
+      }
+
+      return result;
 		}
 		
 		public override Gtk.Image GetImage () {
-			return GetImageFromResource(string.Format("CardLib.CardImages.Back{0}.png", backColor.Name));
+			return GetImageFromResource(string.Format("Back.png", backColor.Name));
 		}
 	}
 	
