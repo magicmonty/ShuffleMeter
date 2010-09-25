@@ -11,7 +11,11 @@ public partial class MainWindow : Gtk.Window {
 	public MainWindow() : base(Gtk.WindowType.Toplevel) {
 		Build();
 		deck = CardDeck.FromNewDeckOrder();
-				
+
+    for (int i = 0; i < deck.Count; i++) {
+      deck.getCardAt(i).mark = i;
+    }
+
 		updateDeckView();
 	}
 
@@ -72,5 +76,12 @@ public partial class MainWindow : Gtk.Window {
     this.updateDeckView();
   }
 
+  protected virtual void OnNewDeckOrderActionActivated (object sender, System.EventArgs e)
+  {
+    this.deck.shuffleStrategy = new NewDeckOrderStrategy();
+
+    this.deck.shuffle();
+    this.updateDeckView();
+  }
 
  }

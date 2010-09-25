@@ -172,8 +172,7 @@ namespace CardLib {
             AbstractCard card = this.Deck.getCardAt(this.FromIndex + i);
             
             if (card != null) {
-              win.DrawPixbuf(gc, card.GetPixbuf(), 0, 0, i * this.CardOffset, 0, 71, 98, Gdk.RgbDither.Normal, 0,
-              0);
+              win.DrawPixbuf(gc, card.GetPixbuf(this.drawingarea1, i * this.CardOffset), 0, 0, i * this.CardOffset, 0, 71, 98, Gdk.RgbDither.Normal, 0, 0);
             }
           }
         }
@@ -201,8 +200,11 @@ namespace CardLib {
     protected virtual void OnEventbox1ButtonPressEvent (object o, Gtk.ButtonPressEventArgs args)
     {
       int index = GetCardIndexByMousePosition(args.Event.X, args.Event.Y);
-      if ((index >= 0) && (OnCardClicked != null)) {
-        OnCardClicked(this, index);
+
+      if (args.Event.Button == 1) {
+        if ((index >= 0) && (OnCardClicked != null)) {
+          OnCardClicked(this, index);
+        }
       }
     }
   }

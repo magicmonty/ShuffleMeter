@@ -1,5 +1,6 @@
 using System;
 using System.Drawing;
+using Gtk.DotNet;
 
 namespace CardLib.Cards {
 
@@ -11,6 +12,14 @@ namespace CardLib.Cards {
 		public static CardValue DEFAULT_CARD_VALUE = CardValue.Ace;
 		public static Suit DEFAULT_SUIT = Suit.Clubs;
 		public static Color DEFAULT_BACK_COLOR = Color.Blue;
+
+    public static Color[] MARK_COLORS = {
+      Color.Blue,
+      Color.Green,
+      Color.Red,
+      Color.Coral,
+      Color.Cyan
+    };
 
 		public AbstractSide faceSide { get; set; }
 		public AbstractSide backSide { get; set; }
@@ -27,7 +36,7 @@ namespace CardLib.Cards {
 			this.hover = false;
 		}
 
-		public Gdk.Pixbuf GetPixbuf() {
+		public Gdk.Pixbuf GetPixbuf(Gtk.Widget parent, int offset) {
 			Gdk.Pixbuf result = null;
 			Gdk.Pixbuf original = null;
 			
@@ -46,6 +55,16 @@ namespace CardLib.Cards {
 					tint.Pixbuf.Fill(0x0000ff80);
 					tint.Pixbuf.Composite(result, 0, 0, result.Width, result.Height, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 128);
 				}
+
+        if ((mark > MARK_NONE) && (parent != null)){
+          Gtk.Image markImage = new Gtk.Image((Gdk.Pixbuf) result.Clone());
+          Color markColor = MARK_COLORS[mark % MARK_COLORS.Length];
+          int mask = 255 << 24 + 255 << 16 + 255 << 8;
+          int color = (markColor.R << 24) + (markColor.G << 16) + (markColor.B << 8) + 255;
+
+          markImage.Pixbuf.Fill((uint) color);
+          markImage.Pixbuf.Composite(result, 6, 55, 10, 10, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 255);
+        }
 			}
 			
 			return result;

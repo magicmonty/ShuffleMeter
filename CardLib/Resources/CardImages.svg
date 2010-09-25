@@ -19,7 +19,7 @@
    sodipodi:docname="CardImages.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    style="display:inline"
-   inkscape:export-filename="/home/mg/Projects/ShuffleMeter/CardLib/CardImages/JackDiamonds.png"
+   inkscape:export-filename="/home/mg/Projects/ShuffleMeter/CardLib/CardImages/Back.png"
    inkscape:export-xdpi="35.898876"
    inkscape:export-ydpi="35.898876">
   <defs
@@ -2235,7 +2235,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.8094783"
-     inkscape:cx="37.948189"
+     inkscape:cx="-9.0266764"
      inkscape:cy="124.86231"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -2253,7 +2253,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

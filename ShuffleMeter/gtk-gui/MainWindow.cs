@@ -30,6 +30,8 @@ public partial class MainWindow {
     
     private Gtk.Action AntiOutFaroAction;
     
+    private Gtk.Action NewDeckOrderAction;
+    
     private Gtk.VBox vbox1;
     
     private Gtk.MenuBar menubar1;
@@ -73,6 +75,9 @@ public partial class MainWindow {
         this.AntiOutFaroAction = new Gtk.Action("AntiOutFaroAction", Mono.Unix.Catalog.GetString("Anti Out Faro"), null, null);
         this.AntiOutFaroAction.ShortLabel = Mono.Unix.Catalog.GetString("Anti Out Faro");
         w1.Add(this.AntiOutFaroAction, null);
+        this.NewDeckOrderAction = new Gtk.Action("NewDeckOrderAction", Mono.Unix.Catalog.GetString("New Deck Order"), null, null);
+        this.NewDeckOrderAction.ShortLabel = Mono.Unix.Catalog.GetString("New Deck Order");
+        w1.Add(this.NewDeckOrderAction, null);
         this.UIManager.InsertActionGroup(w1, 0);
         this.AddAccelGroup(this.UIManager.AccelGroup);
         this.Name = "MainWindow";
@@ -83,7 +88,7 @@ public partial class MainWindow {
         this.vbox1.Name = "vbox1";
         this.vbox1.Spacing = 3;
         // Container child vbox1.Gtk.Box+BoxChild
-        this.UIManager.AddUiFromString("<ui><menubar name='menubar1'><menu name='DateiAction' action='DateiAction'><menuitem name='ExitAction' action='ExitAction'/></menu><menu name='ShuffleAction' action='ShuffleAction'><menuitem name='RegularShuffleAction' action='RegularShuffleAction'/><menuitem name='InFaroAction' action='InFaroAction'/><menuitem name='AntiInFaroAction' action='AntiInFaroAction'/><menuitem name='OutFaroAction' action='OutFaroAction'/><menuitem name='AntiOutFaroAction' action='AntiOutFaroAction'/></menu></menubar></ui>");
+        this.UIManager.AddUiFromString("<ui><menubar name='menubar1'><menu name='DateiAction' action='DateiAction'><menuitem name='ExitAction' action='ExitAction'/></menu><menu name='ShuffleAction' action='ShuffleAction'><menuitem name='RegularShuffleAction' action='RegularShuffleAction'/><menuitem name='InFaroAction' action='InFaroAction'/><menuitem name='AntiInFaroAction' action='AntiInFaroAction'/><menuitem name='OutFaroAction' action='OutFaroAction'/><menuitem name='AntiOutFaroAction' action='AntiOutFaroAction'/><menuitem name='NewDeckOrderAction' action='NewDeckOrderAction'/></menu></menubar></ui>");
         this.menubar1 = ((Gtk.MenuBar)(this.UIManager.GetWidget("/menubar1")));
         this.menubar1.Name = "menubar1";
         this.vbox1.Add(this.menubar1);
@@ -154,7 +159,9 @@ public partial class MainWindow {
         this.OutFaroAction.Activated += new System.EventHandler(this.OnOutFaroActionActivated);
         this.AntiInFaroAction.Activated += new System.EventHandler(this.OnAntiInFaroActionActivated);
         this.AntiOutFaroAction.Activated += new System.EventHandler(this.OnAntiOutFaroActionActivated);
+        this.NewDeckOrderAction.Activated += new System.EventHandler(this.OnNewDeckOrderActionActivated);
         this.cardrow1.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
+        this.cardrow1.PopupMenu += new Gtk.PopupMenuHandler(this.OnCardrow1PopupMenu);
         this.cardrow2.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
         this.cardrow3.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
         this.cardrow4.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);

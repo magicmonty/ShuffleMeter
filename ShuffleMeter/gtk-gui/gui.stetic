@@ -55,6 +55,12 @@
         <property name="ShortLabel" translatable="yes">Anti Out Faro</property>
         <signal name="Activated" handler="OnAntiOutFaroActionActivated" />
       </action>
+      <action id="NewDeckOrderAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">New Deck Order</property>
+        <property name="ShortLabel" translatable="yes">New Deck Order</property>
+        <signal name="Activated" handler="OnNewDeckOrderActionActivated" />
+      </action>
     </action-group>
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
@@ -77,6 +83,7 @@
                 <node type="Menuitem" action="AntiInFaroAction" />
                 <node type="Menuitem" action="OutFaroAction" />
                 <node type="Menuitem" action="AntiOutFaroAction" />
+                <node type="Menuitem" action="NewDeckOrderAction" />
               </node>
             </node>
           </widget>
