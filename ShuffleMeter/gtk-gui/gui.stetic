@@ -100,6 +100,7 @@
             <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
             <signal name="OnCardClicked" handler="OnCardrowCardClicked" />
+            <signal name="OnCardContextMenu" handler="OnCardrowContextMenu" />
           </widget>
           <packing>
             <property name="Position">1</property>
@@ -114,6 +115,7 @@
             <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
             <signal name="OnCardClicked" handler="OnCardrowCardClicked" />
+            <signal name="OnCardContextMenu" handler="OnCardrowContextMenu" />
           </widget>
           <packing>
             <property name="Position">2</property>
@@ -128,6 +130,7 @@
             <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
             <signal name="OnCardClicked" handler="OnCardrowCardClicked" />
+            <signal name="OnCardContextMenu" handler="OnCardrowContextMenu" />
           </widget>
           <packing>
             <property name="Position">3</property>
@@ -142,6 +145,7 @@
             <property name="HeightRequest">108</property>
             <property name="Events">ButtonPressMask</property>
             <signal name="OnCardClicked" handler="OnCardrowCardClicked" />
+            <signal name="OnCardContextMenu" handler="OnCardrowContextMenu" />
           </widget>
           <packing>
             <property name="Position">4</property>

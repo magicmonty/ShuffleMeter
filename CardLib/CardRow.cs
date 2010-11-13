@@ -13,7 +13,7 @@ namespace CardLib {
   }
 
   public delegate void CardClickedEventHandler(object sender, int cardIndex);
-  
+
   [System.ComponentModel.ToolboxItem(true)]
   public partial class CardRow : Gtk.Bin {
     private CardDeck Deck;
@@ -23,12 +23,12 @@ namespace CardLib {
     private int CardOffset;
 
     public event CardClickedEventHandler OnCardClicked;
+    public event CardClickedEventHandler OnCardContextMenu;
 
     public CardRow() {
       this.Deck = CardDeck.FromNewDeckOrder();
       this.FromIndex = 0;
       this.ToIndex = Deck.Count - 1;
-
       this.Build();
     }
 
@@ -172,7 +172,7 @@ namespace CardLib {
             AbstractCard card = this.Deck.getCardAt(this.FromIndex + i);
             
             if (card != null) {
-              win.DrawPixbuf(gc, card.GetPixbuf(this.drawingarea1, i * this.CardOffset), 0, 0, i * this.CardOffset, 0, 71, 98, Gdk.RgbDither.Normal, 0, 0);
+              win.DrawPixbuf(gc, card.GetPixbuf(i * this.CardOffset), 0, 0, i * this.CardOffset, 0, 71, 98, Gdk.RgbDither.Normal, 0, 0);
             }
           }
         }
@@ -204,6 +204,10 @@ namespace CardLib {
       if (args.Event.Button == 1) {
         if ((index >= 0) && (OnCardClicked != null)) {
           OnCardClicked(this, index);
+        }
+      } else {
+        if ((index >= 0) && (OnCardContextMenu != null)) {
+          OnCardContextMenu(this, index);
         }
       }
     }

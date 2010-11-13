@@ -161,9 +161,12 @@ public partial class MainWindow {
         this.AntiOutFaroAction.Activated += new System.EventHandler(this.OnAntiOutFaroActionActivated);
         this.NewDeckOrderAction.Activated += new System.EventHandler(this.OnNewDeckOrderActionActivated);
         this.cardrow1.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
-        this.cardrow1.PopupMenu += new Gtk.PopupMenuHandler(this.OnCardrow1PopupMenu);
+        this.cardrow1.OnCardContextMenu += new CardLib.CardClickedEventHandler(this.OnCardrowContextMenu);
         this.cardrow2.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
+        this.cardrow2.OnCardContextMenu += new CardLib.CardClickedEventHandler(this.OnCardrowContextMenu);
         this.cardrow3.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
+        this.cardrow3.OnCardContextMenu += new CardLib.CardClickedEventHandler(this.OnCardrowContextMenu);
         this.cardrow4.OnCardClicked += new CardLib.CardClickedEventHandler(this.OnCardrowCardClicked);
+        this.cardrow4.OnCardContextMenu += new CardLib.CardClickedEventHandler(this.OnCardrowContextMenu);
     }
 }

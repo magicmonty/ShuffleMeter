@@ -25,7 +25,7 @@ namespace CardLib {
 
       for (CardValue v = CardValue.Ace; v <= CardValue.King; v++) {
         for (int i = 0; i < tempDeck.Count; i++) {
-          AbstractCard card = deck.getCardAt(i);
+          AbstractCard card = tempDeck.getCardAt(i);
           AbstractSide cside = card.faceSide;
 
           if (cside is CardSide) {
@@ -39,7 +39,7 @@ namespace CardLib {
 
       for (CardValue v = CardValue.Ace; v <= CardValue.King; v++) {
         for (int i = 0; i < tempDeck.Count; i++) {
-          AbstractCard card = deck.getCardAt(i);
+          AbstractCard card = tempDeck.getCardAt(i);
           AbstractSide cside = card.faceSide;
 
           if (cside is CardSide) {
@@ -53,7 +53,7 @@ namespace CardLib {
 
       for (CardValue v = CardValue.King; v >= CardValue.Ace; v--) {
         for (int i = 0; i < tempDeck.Count; i++) {
-          AbstractCard card = deck.getCardAt(i);
+          AbstractCard card = tempDeck.getCardAt(i);
           AbstractSide cside = card.faceSide;
 
           if (cside is CardSide) {
@@ -67,7 +67,7 @@ namespace CardLib {
 
       for (CardValue v = CardValue.King; v >= CardValue.Ace; v--) {
         for (int i = 0; i < tempDeck.Count; i++) {
-          AbstractCard card = deck.getCardAt(i);
+          AbstractCard card = tempDeck.getCardAt(i);
           AbstractSide cside = card.faceSide;
 
           if (cside is CardSide) {

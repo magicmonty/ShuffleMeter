@@ -36,7 +36,7 @@ namespace CardLib.Cards {
 			this.hover = false;
 		}
 
-		public Gdk.Pixbuf GetPixbuf(Gtk.Widget parent, int offset) {
+		public Gdk.Pixbuf GetPixbuf(int offset) {
 			Gdk.Pixbuf result = null;
 			Gdk.Pixbuf original = null;
 			
@@ -56,14 +56,28 @@ namespace CardLib.Cards {
 					tint.Pixbuf.Composite(result, 0, 0, result.Width, result.Height, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 128);
 				}
 
-        if ((mark > MARK_NONE) && (parent != null)){
+        if (mark > MARK_NONE){
           Gtk.Image markImage = new Gtk.Image((Gdk.Pixbuf) result.Clone());
+
+          int markPositionX = 8;
+          int markPositionY = 53;
+          int markWidth = 12;
+          int markHeight = 12;
+          int markBorderWidth = 1;
+          uint markBorderColor = 0x000000ff;
+          if (!this.faceUp) {
+            markBorderColor = 0xffffffff;
+          }
+
+          markImage.Pixbuf.Fill(markBorderColor);
+          markImage.Pixbuf.Composite(result, markPositionX, markPositionY, markWidth, markHeight, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 255);
+
           Color markColor = MARK_COLORS[mark % MARK_COLORS.Length];
-          int mask = 255 << 24 + 255 << 16 + 255 << 8;
           int color = (markColor.R << 24) + (markColor.G << 16) + (markColor.B << 8) + 255;
 
           markImage.Pixbuf.Fill((uint) color);
-          markImage.Pixbuf.Composite(result, 6, 55, 10, 10, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 255);
+          markImage.Pixbuf.Composite(result, markPositionX + markBorderWidth, markPositionY + markBorderWidth, markWidth - 2 * markBorderWidth, markHeight - 2 * markBorderWidth, 0, 0, 1, 1, Gdk.InterpType.Bilinear, 255);
+
         }
 			}
 			
